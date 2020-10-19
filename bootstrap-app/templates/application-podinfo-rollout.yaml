@@ -1,23 +1,20 @@
 {{- range .Values.clusters }}
-{{- if .apps.podinfo.enabled }}
+{{- if .apps.podinfoRollout.enabled }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{printf "%s-%s-%s" .name .project "podinfo"}}
+  name: {{printf "%s-%s-%s" .name .project "podinfo-rollout"}}
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: {{ .project }}
   source: 
-    repoURL: https://stefanprodan.github.io/podinfo
-    targetRevision: {{ .apps.podinfo.version }} # commit, tag, branch
-    chart: podinfo
+    repoURL: https://github.com/samng1991/hkjc-team1-app.git
+    targetRevision: {{ .apps.podinfoRollout.version }} # commit, tag, branch
+    path: applications/podinfo-rollout
     helm:
-      releaseName: podinfo
-      parameters:
-      - name: "image.repository"
-        value: docker.io/stefanprodan/podinfo
+      releaseName: podinfo-rollout
       version: v3
   destination:
     server: {{ .destinationServer }}
