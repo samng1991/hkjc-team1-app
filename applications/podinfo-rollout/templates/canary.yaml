@@ -50,7 +50,7 @@ spec:
     # percentage (0-100)
     stepWeight: 10
     metrics:
-    - name: request-success-rate
+    - name: istio_requests_total
       # minimum req success rate (non 5xx responses)
       # percentage (0-100)
       thresholdRange:
