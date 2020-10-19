@@ -22,6 +22,11 @@ spec:
   destination:
     server: {{ .destinationServer }}
     namespace: team1
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/replicas
 {{- end }}
 ---
 
