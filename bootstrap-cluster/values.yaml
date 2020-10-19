@@ -6,3 +6,6 @@ clusters:
     podinfo:
       enabled: ture
       version: 5.0.2
+    podinfoRollOut:
+      enabled: ture
+      version: develop
