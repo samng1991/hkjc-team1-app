@@ -5,7 +5,7 @@ clusters:
   apps:
     podinfo:
       enabled: ture
-      version: 5.0.0
+      version: 5.0.1
     podinfoRollout:
       enabled: ture
       version: develop
