@@ -27,6 +27,11 @@ spec:
     kind: Deployment
     jsonPointers:
     - /spec/replicas
+  - group: ''
+    kind: Service
+    jsonPointers:
+    - /spec/ports
+    - /selector/app.kubernetes.io\/name
 {{- end }}
 ---
 
