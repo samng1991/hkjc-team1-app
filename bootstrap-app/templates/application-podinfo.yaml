@@ -31,7 +31,7 @@ spec:
     kind: Service
     jsonPointers:
     - /spec/ports
-    - /selector/app.kubernetes.io~1name
+    - /spec/selector/app.kubernetes.io~1name
 {{- end }}
 ---
 
