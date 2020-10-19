@@ -3,4 +3,6 @@ kind: Namespace
 metadata:
   name: team1
   labels:
-    istio-injection: 1
+    istio-injection: "true"
+  annotations:
+    argocd.argoproj.io/sync-wave: "-999"
