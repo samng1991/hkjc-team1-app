@@ -50,13 +50,15 @@ spec:
     # percentage (0-100)
     stepWeight: 10
     metrics:
+    # - name: request-success-rate
     - name: istio_requests_total
       # minimum req success rate (non 5xx responses)
       # percentage (0-100)
       thresholdRange:
         min: 99
       interval: 1m
-    - name: request-duration
+    # - name: request-duration
+    - name: istio_request_duration_seconds
       # maximum req duration P99
       # milliseconds
       thresholdRange:
