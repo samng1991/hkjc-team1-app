@@ -1,6 +1,6 @@
 clusters:
 - name: localhost
-  project: default
+  project: team1
   destinationServer: https://kubernetes.default.svc
   apps:
     podinfo:
