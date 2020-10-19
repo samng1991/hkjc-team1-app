@@ -19,6 +19,10 @@ spec:
   destination:
     server: {{ .destinationServer }}
     namespace: team1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
 {{- end }}
 ---
 
